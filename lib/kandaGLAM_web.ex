@@ -95,6 +95,28 @@ defmodule KandaGLAMWeb do
     end
   end
 
+  def public_view do
+    quote do
+      use Phoenix.View,
+        root: "lib/kandaGLAM_web/templates",
+        namespace: KandaGLAMWeb,
+        pattern: "**/*"
+
+      import Phoenix.HTML
+      import Phoenix.HTML.Form
+      import Phoenix.Component
+      import Phoenix.Controller
+
+      import KandaGLAMWeb.CoreComponents
+
+      def escaped(string) do
+        string |> html_escape() |> safe_to_string()
+      end
+
+      unquote(verified_routes())
+    end
+  end
+
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,

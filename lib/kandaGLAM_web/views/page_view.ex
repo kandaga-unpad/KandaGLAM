@@ -1,11 +1,9 @@
-defmodule KandaGLAMWeb.PageHTML do
+defmodule KandaGLAMWeb.PageView do
   @moduledoc """
   This module contains pages rendered by PageController.
 
   See the `page_html` directory for all templates available.
   """
-  use KandaGLAMWeb, :html
+  use KandaGLAMWeb, :public_view
   import KandaGLAMWeb.Greeting
-
-  embed_templates "page_html/*"
 end
