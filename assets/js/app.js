@@ -30,7 +30,13 @@ let liveSocket = new LiveSocket("/live", Socket, {
   params: { _csrf_token: csrfToken },
 });
 let header = document.getElementById("navigationHeader");
+let footerYear = document.getElementById("footeryear");
 let sticky = header.offsetTop;
+
+const date = new Date();
+const getYear = date.getFullYear();
+
+footerYear.append(getYear);
 
 // Show progress bar on live navigation and form submits
 topbar.config({ barColors: { 0: "#29d" }, shadowColor: "rgba(0, 0, 0, .3)" });

@@ -102,10 +102,14 @@ defmodule KandaGLAMWeb do
         namespace: KandaGLAMWeb,
         pattern: "**/*"
 
+      use Phoenix.Component
+
       import Phoenix.HTML
       import Phoenix.HTML.Form
       import Phoenix.Component
-      import Phoenix.Controller
+
+      import Phoenix.Controller,
+        only: [get_csrf_token: 0, view_module: 1, view_template: 1]
 
       import KandaGLAMWeb.CoreComponents
 

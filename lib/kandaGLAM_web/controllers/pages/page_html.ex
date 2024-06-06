@@ -1,4 +1,4 @@
-defmodule KandaGLAMWeb.PageView do
+defmodule KandaGLAMWeb.PageHTML do
   @moduledoc """
   This module contains pages rendered by PageController.
 
