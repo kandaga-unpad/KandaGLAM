@@ -1,9 +1,12 @@
 <.flash_group flash={@flash} />
-<section>
-  <div class="flex items-center justify-center mb-12">
+<section class="relative">
+  <div class="flex items-center justify-center mb-12 relative z-5">
     <img src={~p"/images/kandaglam.png"} alt="" class="h-full w-32" />
   </div>
   <div>
+    <img src={~p"/images/default_bg.webp"} class="absolute w-full object-cover z-1 top-0" />
+  </div>
+  <div class="z-5">
     <div class="search-tab">
       <div
         id="tab-quick"
