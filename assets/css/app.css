@@ -11,6 +11,11 @@
   @apply text-base;
 }
 
+:root {
+  --text-color: dark;
+  --bg-color: orange;
+}
+
 /* This file is for your main application CSS */
 h1,
 h2,
@@ -51,4 +56,16 @@ h6 {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.search-tab {
+  @apply flex items-center justify-between;
+}
+
+.search-tab-item {
+  @apply bg-orange-50 p-2 w-full text-center rounded-tl-lg rounded-tr-lg cursor-pointer;
+}
+
+.active-tab-item {
+  @apply bg-orange-200 p-2;
 }
