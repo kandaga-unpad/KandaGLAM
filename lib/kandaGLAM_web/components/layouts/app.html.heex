@@ -1,13 +1,16 @@
 <section class="bg-orange-200 px-4 py-2 text-sm">
   <p class="text-sm font-semibold">Mini Banner here!</p>
 </section>
-<header class="px-4 sm:px-6 lg:px-8 bg-orange-50/50 backdrop-blur-sm z-10" id="navigationHeader">
+<header
+  class="px-4 sm:px-6 lg:px-8 bg-orange-50/70 backdrop-blur-sm z-10 w-full"
+  id="navigationHeader"
+>
   <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
     <div class="flex items-center gap-2">
-      <a href="/">
+      <a href="/" class="flex items-center gap-2">
         <img src={~p"/images/kandaglam.png"} width="36" />
+        <h5>KandaGLAM</h5>
       </a>
-      <h5>KandaGLAM</h5>
     </div>
     <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
       <.link href={~p"/about"}>
@@ -17,7 +20,7 @@
   </div>
 </header>
 <main class="content">
-  <div>
+  <div class="w-full">
     <.flash_group flash={@flash} />
     <%= @inner_content %>
   </div>
